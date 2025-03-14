@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 18px;
+  font-family: monospace;
+  line-height: 1.4;
+  color: #212121;
+  background: #f6f6f6;
+}
+
+body {
+  margin: 1em auto;
+  max-width: 720px;
+}
+
+/*/
+ *  depending on the project, remove one or more:
+ *  - nav
+ *  - header
+ *  - main
+ *  - section
+ *  - footer
+ *  for a better design.
+/*/ 
+
+p,
+hr,
+pre,
+nav,
+main,
+form,
+table,
+header,
+footer,
+section,
+blockquote {
+  margin: 1em 0;
+}
+
+/*/
+ * -------------------------------------------------- *
+/*/
+
+a {
+  color: inherit;
+}
+
+pre {
+  padding: 1em;
+  border-radius: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+blockquote { 
+  border-left: 4px solid #212121;
+  padding-left: 1em;
+}
+
+ul,
+ol {
+  margin: 1em 1em;
+}
+
+pre,
+code {
+  color: white;
+  overflow: auto;
+  background: #212121;
+}
+
+button,
+input[type="button"] {
+  background: #212121;
+  color: #f6f6f6;
+}
+
+td,
+th,
+table {
+  border: 1px solid #212121;
+  padding: 8px;
+  border-collapse: collapse;
+}
+
+input,
+button,
+select {
+  border: 1px solid #212121;
+  outline: none;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+@media (max-width: 756px) { /*max-width = default-max-width + margin * 2*/
+  body {
+    font-size: 16px;
+    max-width: auto;
+    margin: 1em;
+  }
+}
