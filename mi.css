@@ -17,6 +17,10 @@ body {
   max-width: 720px;
 }
 
+article h1 { /*override :-webkit-any*/
+  font-size: 2em;
+}
+
 /*/
  *  depending on the project, remove one or more:
  *  - nav
