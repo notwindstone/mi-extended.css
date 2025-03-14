@@ -90,10 +90,9 @@ code {
   background: #212121;
 }
 
-button,
-input[type="button"] {
-  background: #212121;
-  color: #f6f6f6;
+input:disabled,
+button:disabled {
+  opacity: 0.8;
 }
 
 td,
@@ -106,11 +105,21 @@ table {
 
 input,
 button,
-select {
+select,
+textarea {
   border: 1px solid #212121;
   outline: none;
   padding: 3px 8px;
+  background: none;
   border-radius: 3px;
+}
+
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+  background: #212121;
+  color: #f6f6f6;
 }
 
 @media (max-width: 752px) { /*max-width = default-max-width + margin * 2*/
