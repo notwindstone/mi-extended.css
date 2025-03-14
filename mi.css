@@ -17,37 +17,38 @@ body {
   max-width: 720px;
 }
 
-article h1 { /*override :-webkit-any*/
-  font-size: 2em;
-}
-
 /*/
  *  depending on the project, remove one or more:
  *  - nav
  *  - header
  *  - main
+ *  - article
  *  - section
  *  - footer
- *  for a better design.
 /*/ 
-
-p,
-hr,
-pre,
 nav,
 main,
-form,
-table,
 header,
 footer,
 section,
-blockquote {
+article {
   margin: 1em 0;
 }
-
 /*/
  * -------------------------------------------------- *
 /*/
+
+p,
+ul,
+ol,
+dl,
+hr,
+pre,
+form,
+table,
+blockquote {
+  margin: 1em 0;
+}
 
 a {
   color: inherit;
@@ -68,9 +69,18 @@ blockquote {
   padding-left: 1em;
 }
 
+article h1 { /*override :-webkit-any*/
+  font-size: 2em;
+}
+
 ul,
 ol {
-  margin: 1em 1em;
+  list-style-position: inside;
+}
+
+li ul,
+li ol {
+  margin: 1em;
 }
 
 pre,
@@ -103,7 +113,7 @@ select {
   border-radius: 3px;
 }
 
-@media (max-width: 756px) { /*max-width = default-max-width + margin * 2*/
+@media (max-width: 752px) { /*max-width = default-max-width + margin * 2*/
   body {
     font-size: 16px;
     max-width: auto;
