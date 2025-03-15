@@ -28,6 +28,9 @@ article {
 /*/
 
 dt,
+pre,
+form,
+table,
 blockquote {
   margin: 1em 0;
 }
@@ -51,7 +54,6 @@ input {
 }
 
 blockquote {
-  margin: 1em 0;
   border-left: 4px solid #212121;
   padding-left: 1em;
 }
