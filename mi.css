@@ -19,12 +19,6 @@ body {
 
 /*/
  *  depending on the project, remove one or more:
- *  - nav
- *  - header
- *  - main
- *  - article
- *  - section
- *  - footer
 /*/ 
 nav,
 main,
@@ -61,8 +55,12 @@ pre {
 }
 
 img {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
+}
+
+input {
+  vertical-align: middle;
 }
 
 blockquote { 
@@ -122,8 +120,8 @@ legend,
 input[type="reset"],
 input[type="button"],
 input[type="submit"] {
-  background: #212121;
   color: #f6f6f6;
+  background: #212121;
 }
 
 @media (max-width: 752px) { /*max-width = default-max-width + margin * 2*/
