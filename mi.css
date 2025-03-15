@@ -1,15 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html,
 body {
-  font-size: 16px;
-  font-family: monospace;
-  line-height: 1.4;
   color: #212121;
+  font-size: 16px;
   background: #f6f6f6;
+  line-height: 1.4;
+  font-family: monospace;
 }
 
 body {
@@ -32,15 +27,7 @@ article {
  * -------------------------------------------------- *
 /*/
 
-p,
-ul,
-ol,
-dl,
 dt,
-hr,
-pre,
-form,
-table,
 blockquote {
   margin: 1em 0;
 }
@@ -63,7 +50,8 @@ input {
   vertical-align: middle;
 }
 
-blockquote { 
+blockquote {
+  margin: 1em 0;
   border-left: 4px solid #212121;
   padding-left: 1em;
 }
@@ -74,12 +62,8 @@ article h1 { /*override :-webkit-any*/
 
 ul,
 ol {
+  padding: 1em;
   list-style-position: inside;
-}
-
-li ul,
-li ol {
-  margin: 1em;
 }
 
 pre,
@@ -124,7 +108,7 @@ input[type="submit"] {
   background: #212121;
 }
 
-@media (max-width: 752px) { /*max-width = default-max-width + margin * 2*/
+@media (max-width: 752px) { /*max-width = default-max-width + (margin * 2)*/
   body {
     margin: 1em;
   }
