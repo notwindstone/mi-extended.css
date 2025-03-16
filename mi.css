@@ -14,7 +14,7 @@ body {
 }
 
 /*/
- *  depending on the project, remove one or more:
+ *  depending on the project, add or remove:
 /*/ 
 nav,
 main,
@@ -67,8 +67,13 @@ article h1 { /*override :-webkit-any*/
 
 ul,
 ol {
-  padding: 0 1em;
+  padding: 0;
   list-style-position: inside;
+}
+
+li > ul,
+li > ol {
+  padding: 0 1em;
 }
 
 pre,
