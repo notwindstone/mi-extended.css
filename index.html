@@ -3,273 +3,431 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/felipeizolan/mi.css@latest/mi.css">
+      <link rel="stylesheet" href="./mi.css">
       <title>mi.css</title>
    </head>
    <body>
-      <header>
-         <h1>ʕ•ᴥ•ʔ mi.css</h1>
+      <header style="margin:0">
+        <h1 style="margin:0">ʕ•ᴥ•ʔ mi.css</h1>
+        <div style="display:flex;gap:2px;font-size:0.8em"> 
+          <a style="text-decoration:underline" onclick="root.innerHTML=pages.html">All HTML</a> |
+          <a style="text-decoration:underline" onclick="root.innerHTML=pages.post">Post Example</a> |
+          <a style="text-decoration:underline" onclick="root.innerHTML=pages.form">Form Example</a>
+        </div>
       </header>
-      <main>
-         <img src="https://github.com/michaelScopic/Wallpapers/blob/main/anime/Konachan.com_-_376008_sample.jpg?raw=true" alt="Konachan"/>
-         <blockquote>Credits to <a href="https://gist.github.com/jaredpalmer/2f37ab6d57b6bc88719a9272a3799bee">jaredpalmer/all-html-elements.html</a></blockquote>
-         <p>This is a test page filled with common HTML elements to be a preview of <a href="https://github.com/FelipeIzolan/mi.css">mi.css</a> preset.</p>
-      </main>
-      <hr/>
+      <div id='root'>
+      </div>
+  </body>
+  <script>  
+  var root = document.getElementById('root');
+  var pages = {
+    html: `
+ <main>
+   <img src="https://github.com/michaelScopic/Wallpapers/blob/main/anime/Konachan.com_-_376008_sample.jpg?raw=true" alt="Konachan" />
+   <blockquote>Credits to <a href="https://gist.github.com/jaredpalmer/2f37ab6d57b6bc88719a9272a3799bee">jaredpalmer/all-html-elements.html</a>
+   </blockquote>
+   <p>This is a test page filled with common HTML elements to be a preview of <a href="https://github.com/FelipeIzolan/mi.css">mi.css</a> preset. </p>
+</main>
+<hr />
+<ul>
+   <li>
+      <span>Text</span>
       <ul>
          <li>
-            <span>Text</span>
-            <ul>
-               <li><a href="#text__headings">Headings</a></li>
-               <li><a href="#text__paragraphs">Paragraphs</a></li>
-               <li><a href="#text__blockquotes">Blockquotes</a></li>
-               <li><a href="#text__lists">Lists</a></li>
-               <li><a href="#text__definition_lists">Definition Lists</a></li>
-               <li><a href="#text__tables">Tables</a></li>
-               <li><a href="#text__code">Code</a></li>
-            </ul>
+            <a href="#text__headings">Headings</a>
          </li>
          <li>
-            <span>Form Elements</span>
-            <ul>
-               <li><a href="#forms__inputs">Inputs</a></li>
-               <li><a href="#forms__selects">Selects</a></li>
-               <li><a href="#forms__checkboxs">Checkboxes</a></li>
-               <li><a href="#forms__radios">Radios</a></li>
-               <li><a href="#forms__textareas">Textareas</a></li>
-               <li><a href="#forms__fieldsets">Fieldsets</a></li>
-               <li><a href="#forms__html5">HTML5 inputs</a></li>
-               <li><a href="#forms__action">Action buttons</a></li>
-            </ul>
+            <a href="#text__paragraphs">Paragraphs</a>
+         </li>
+         <li>
+            <a href="#text__blockquotes">Blockquotes</a>
+         </li>
+         <li>
+            <a href="#text__lists">Lists</a>
+         </li>
+         <li>
+            <a href="#text__definition_lists">Definition Lists</a>
+         </li>
+         <li>
+            <a href="#text__tables">Tables</a>
+         </li>
+         <li>
+            <a href="#text__code">Code</a>
          </li>
       </ul>
-      <hr/>
-      <article>
-         <h2 id="text__headings">Headings</h2>
-         <h1>Heading 1</h1>
-         <h2>Heading 2</h2>
-         <h2>Heading 3</h2>
-         <h4>Heading 4</h4>
-         <h5>Heading 5</h5>
-         <h6>Heading 6</h6>
-      </article>
-      <hr/>
-      <article>
-         <h2 id="text__paragraphs">Paragraphs</h2>
-         <p>
-            Life’s all about the journey. Embrace the small moments, and remember—growth happens when you least expect it. Keep moving forward!
-         </p>
-         <p>
-            Life is meaningless. The moments come and go, and growth, if it occurs, is an accident. Keep moving, though it doesn’t really matter.
-         </p>
-      </article>
-      <hr/>
-      <article>
-         <h2 id="text__blockquotes">Blockquotes</h2>
-         <blockquote>
-            "Innovation distinguishes between a leader and a follower."<br/>
-            — Steve Jobs
-         </blockquote>
-      </article>
-      <hr/>
-      <article>
-         <h2 id="text__lists">Lists</h2>
-         <h3>Unordered List</h3>
-         <ul>
-            <li>Apple</li>
-            <li>Orange</li>
-            <li>Watermelon</li>
-         </ul>
-         <h3>Ordered List</h3>
-         <ol>
-            <li>Apple</li>
-            <li>Orange</li>
-            <li>Watermelon</li>
-         </ol>
-      </article>
-      <hr/>
-      <article>
-         <h2 id="text__definition_lists">Definition Lists</h2>
-         <dl>
-            <dt>Firefox</dt>
-            <dd>
-               A free, open-source, cross-platform web browser developed by Mozilla and volunteers.
-            </dd>
-            <dt>Chromium</dt>
-            <dd>
-               An open-source browser that serves as the base for Google Chrome and other browsers.
-            </dd>
-         </dl>
-      </article>
-      <hr/>
-      <article>
-         <h2 id="text__tables">Tables</h2>
-         <table>
-            <tr>
-               <th>Name</th>
-               <th>Age</th>
-               <th>Country</th>
-            </tr>
-            <tr>
-               <td>Harry Depp</td>
-               <td>28</td>
-               <td>Britain</td>
-            </tr>
-            <tr>
-               <td>John Smith</td>
-               <td>35</td>
-               <td>USA</td>
-            </tr>
-            <tr>
-               <td>Ram Krishna</td>
-               <td>19</td>
-               <td>Nepal</td>
-            </tr>
-         </table>
-      </article>
-      <hr/>
-      <article>
-         <h2 id="text__code">Code</h2>
-         <pre><code>function calc_damage(x, m) {
+   </li>
+   <li>
+      <span>Form Elements</span>
+      <ul>
+         <li>
+            <a href="#forms__inputs">Inputs</a>
+         </li>
+         <li>
+            <a href="#forms__selects">Selects</a>
+         </li>
+         <li>
+            <a href="#forms__checkboxs">Checkboxes</a>
+         </li>
+         <li>
+            <a href="#forms__radios">Radios</a>
+         </li>
+         <li>
+            <a href="#forms__textareas">Textareas</a>
+         </li>
+         <li>
+            <a href="#forms__fieldsets">Fieldsets</a>
+         </li>
+         <li>
+            <a href="#forms__html5">HTML5 inputs</a>
+         </li>
+         <li>
+            <a href="#forms__action">Action buttons</a>
+         </li>
+      </ul>
+   </li>
+</ul>
+<hr />
+<article>
+   <h2 id="text__headings">Headings</h2>
+   <h1>Heading 1</h1>
+   <h2>Heading 2</h2>
+   <h2>Heading 3</h2>
+   <h4>Heading 4</h4>
+   <h5>Heading 5</h5>
+   <h6>Heading 6</h6>
+</article>
+<hr />
+<article>
+   <h2 id="text__paragraphs">Paragraphs</h2>
+   <p> Life’s all about the journey. Embrace the small moments, and remember—growth happens when you least expect it. Keep moving forward! </p>
+   <p> Life is meaningless. The moments come and go, and growth, if it occurs, is an accident. Keep moving, though it doesn’t really matter. </p>
+</article>
+<hr />
+<article>
+   <h2 id="text__blockquotes">Blockquotes</h2>
+   <blockquote> "Innovation distinguishes between a leader and a follower." <br /> — Steve Jobs </blockquote>
+</article>
+<hr />
+<article>
+   <h2 id="text__lists">Lists</h2>
+   <h3>Unordered List</h3>
+   <ul>
+      <li>Apple</li>
+      <li>Orange</li>
+      <li>Watermelon</li>
+   </ul>
+   <h3>Ordered List</h3>
+   <ol>
+      <li>Apple</li>
+      <li>Orange</li>
+      <li>Watermelon</li>
+   </ol>
+</article>
+<hr />
+<article>
+   <h2 id="text__definition_lists">Definition Lists</h2>
+   <dl>
+      <dt>Firefox</dt>
+      <dd> A free, open-source, cross-platform web browser developed by Mozilla and volunteers. </dd>
+      <dt>Chromium</dt>
+      <dd> An open-source browser that serves as the base for Google Chrome and other browsers. </dd>
+   </dl>
+</article>
+<hr />
+<article>
+   <h2 id="text__tables">Tables</h2>
+   <table>
+      <tr>
+         <th>Name</th>
+         <th>Age</th>
+         <th>Country</th>
+      </tr>
+      <tr>
+         <td>Harry Depp</td>
+         <td>28</td>
+         <td>Britain</td>
+      </tr>
+      <tr>
+         <td>John Smith</td>
+         <td>35</td>
+         <td>USA</td>
+      </tr>
+      <tr>
+         <td>Ram Krishna</td>
+         <td>19</td>
+         <td>Nepal</td>
+      </tr>
+   </table>
+</article>
+<hr />
+<article>
+   <h2 id="text__code">Code</h2>
+   <pre>
+<code>function calc_damage(x, m) {
   return x * m;
 }</code></pre>
-      </article>
-      <hr/>
-      <article>
-         <h2 id="forms__inputs">Inputs</h2>
-         <p>
-            <label for="input__text">Text Input:</label>
-            <input id="input__text" type="text" placeholder="Text Input">
-         </p>
-         <p>
-            <label for="input__password">Password:</label>
-            <input id="input__password" type="password" placeholder="Type your Password">
-         </p>
-         <p>
-            <label for="input__webaddress">Web Address:</label>
-            <input id="input__webaddress" type="url" placeholder="http://yoursite.com">
-         </p>
-         <p>
-            <label for="input__emailaddress">Email Address:</label>
-            <input id="input__emailaddress" type="email" placeholder="name@email.com">
-         </p>
-         <p>
-            <label for="input__phone">Phone Number:</label>
-            <input id="input__phone" type="tel" placeholder="(999) 999-9999">
-         </p>
-         <p>
-            <label for="input__search">Search:</label>
-            <input id="input__search" type="search" placeholder="Enter Search Term">
-         </p>
-         <p>
-            <label for="input__text2">Number Input:</label>
-            <input id="input__text2" type="number" placeholder="Enter a Number">
-         </p>
-      </article>
-      <hr/>
-      <article>
-         <h2 id="forms__selects">Selects</h2>
-         <p>
-            <label for="select">Select:</label>
-            <select id="select">
-               <optgroup label="Option Group">
-                  <option>Option One</option>
-                  <option>Option Two</option>
-                  <option>Option Three</option>
-               </optgroup>
-            </select>
-         </p>
-      </article>
-      <hr/>
-      <article>
-         <h2 id="forms__checkboxs">Checkboxes</h2>
-         <ul>
-            <li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label></li>
-            <li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label></li>
-            <li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label></li>
-         </ul>
-      </article>
-      <hr/>
-      <article>
-         <h2 id="forms__radios">Radios</h2>
-         <ul>
-            <li><label for="radio1"><input id="radio1" name="radio" type="radio" class="radio" checked="checked"> Option 1</label></li>
-            <li><label for="radio2"><input id="radio2" name="radio" type="radio" class="radio"> Option 2</label></li>
-            <li><label for="radio3"><input id="radio3" name="radio" type="radio" class="radio"> Option 3</label></li>
-         </ul>
-      </article>
-      <hr/>
-      <article>
-         <h2 id="forms__textareas">Textareas</h2>
-         <p>
-            <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
-         </p>
-      </article>
-      <hr/>
-      <article>
-         <h2 id="forms__fieldsets">Fieldsets</h2>
-         <fieldset>
-            <legend>Choose your favorite monster</legend>
-            <input type="radio" id="kraken" name="monster" value="K" />
-            <label for="kraken">Kraken</label><br />
-            <input type="radio" id="sasquatch" name="monster" value="S" />
-            <label for="sasquatch">Sasquatch</label><br />
-            <input type="radio" id="mothman" name="monster" value="M" />
-            <label for="mothman">Mothman</label>
-         </fieldset>
-      </article>
-      <hr/>
-      <article>
-         <h2 id="forms__html5">HTML5 inputs</h2>
-         <p>
-            <label for="ic">Color input:</label>
-            <input type="color" id="ic" value="#000000">
-         </p>
-         <p>
-            <label for="in">Number input:</label>
-            <input type="number" id="in" min="0" max="10" value="5">
-         </p>
-         <p>
-            <label for="ir">Range input:</label>
-            <input type="range" id="ir" value="10">
-         </p>
-         <p>
-            <label for="idd">Date input:</label>
-            <input type="date" id="idd" value="1970-01-01">
-         </p>
-         <p>
-            <label for="idm">Month input:</label>
-            <input type="month" id="idm" value="1970-01">
-         </p>
-         <p>
-            <label for="idw">Week input:</label>
-            <input type="week" id="idw" value="1970-W01">
-         </p>
-         <p>
-            <label for="idt">Datetime input:</label>
-            <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
-         </p>
-         <p>
-            <label for="idtl">Datetime-local input:</label>
-            <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
-         </p>
-      </article>
-      <hr/>
-      <article id="forms__action">
-         <h2>Action buttons</h2>
-         <p>
-            <input type="submit" value="<input type=submit>">
-            <input type="button" value="<input type=button>">
-            <input type="reset" value="<input type=reset>">
-            <input type="submit" value="<input disabled>" disabled>
-         </p>
-         <p>
-            <button type="submit">&lt;button type=submit&gt;</button>
-            <button type="button">&lt;button type=button&gt;</button>
-            <button type="reset">&lt;button type=reset&gt;</button>
-            <button type="button" disabled>&lt;button disabled&gt;</button>
-         </p>
-      </article>
-      <hr/>
-   </body>
+</article>
+<hr />
+<article>
+   <h2 id="forms__inputs">Inputs</h2>
+   <p>
+      <label for="input__text">Text Input:</label>
+      <input id="input__text" type="text" placeholder="Text Input">
+   </p>
+   <p>
+      <label for="input__password">Password:</label>
+      <input id="input__password" type="password" placeholder="Type your Password">
+   </p>
+   <p>
+      <label for="input__webaddress">Web Address:</label>
+      <input id="input__webaddress" type="url" placeholder="http://yoursite.com">
+   </p>
+   <p>
+      <label for="input__emailaddress">Email Address:</label>
+      <input id="input__emailaddress" type="email" placeholder="name@email.com">
+   </p>
+   <p>
+      <label for="input__phone">Phone Number:</label>
+      <input id="input__phone" type="tel" placeholder="(999) 999-9999">
+   </p>
+   <p>
+      <label for="input__search">Search:</label>
+      <input id="input__search" type="search" placeholder="Enter Search Term">
+   </p>
+   <p>
+      <label for="input__text2">Number Input:</label>
+      <input id="input__text2" type="number" placeholder="Enter a Number">
+   </p>
+</article>
+<hr />
+<article>
+   <h2 id="forms__selects">Selects</h2>
+   <p>
+      <label for="select">Select:</label>
+      <select id="select">
+         <optgroup label="Option Group">
+            <option>Option One</option>
+            <option>Option Two</option>
+            <option>Option Three</option>
+         </optgroup>
+      </select>
+   </p>
+</article>
+<hr />
+<article>
+   <h2 id="forms__checkboxs">Checkboxes</h2>
+   <ul>
+      <li>
+         <label for="checkbox1">
+         <input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Choice A </label>
+      </li>
+      <li>
+         <label for="checkbox2">
+         <input id="checkbox2" name="checkbox" type="checkbox"> Choice B </label>
+      </li>
+      <li>
+         <label for="checkbox3">
+         <input id="checkbox3" name="checkbox" type="checkbox"> Choice C </label>
+      </li>
+   </ul>
+</article>
+<hr />
+<article>
+   <h2 id="forms__radios">Radios</h2>
+   <ul>
+      <li>
+         <label for="radio1">
+         <input id="radio1" name="radio" type="radio" class="radio" checked="checked"> Option 1 </label>
+      </li>
+      <li>
+         <label for="radio2">
+         <input id="radio2" name="radio" type="radio" class="radio"> Option 2 </label>
+      </li>
+      <li>
+         <label for="radio3">
+         <input id="radio3" name="radio" type="radio" class="radio"> Option 3 </label>
+      </li>
+   </ul>
+</article>
+<hr />
+<article>
+   <h2 id="forms__textareas">Textareas</h2>
+   <p>
+      <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+   </p>
+</article>
+<hr />
+<article>
+   <h2 id="forms__fieldsets">Fieldsets</h2>
+   <fieldset>
+      <legend>Choose your favorite monster</legend>
+      <input type="radio" id="kraken" name="monster" value="K" />
+      <label for="kraken">Kraken</label>
+      <br />
+      <input type="radio" id="sasquatch" name="monster" value="S" />
+      <label for="sasquatch">Sasquatch</label>
+      <br />
+      <input type="radio" id="mothman" name="monster" value="M" />
+      <label for="mothman">Mothman</label>
+   </fieldset>
+</article>
+<hr />
+<article>
+   <h2 id="forms__html5">HTML5 inputs</h2>
+   <p>
+      <label for="ic">Color input:</label>
+      <input type="color" id="ic" value="#000000">
+   </p>
+   <p>
+      <label for="in">Number input:</label>
+      <input type="number" id="in" min="0" max="10" value="5">
+   </p>
+   <p>
+      <label for="ir">Range input:</label>
+      <input type="range" id="ir" value="10">
+   </p>
+   <p>
+      <label for="idd">Date input:</label>
+      <input type="date" id="idd" value="1970-01-01">
+   </p>
+   <p>
+      <label for="idm">Month input:</label>
+      <input type="month" id="idm" value="1970-01">
+   </p>
+   <p>
+      <label for="idw">Week input:</label>
+      <input type="week" id="idw" value="1970-W01">
+   </p>
+   <p>
+      <label for="idt">Datetime input:</label>
+      <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
+   </p>
+   <p>
+      <label for="idtl">Datetime-local input:</label>
+      <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
+   </p>
+</article>
+<hr />
+<article id="forms__action">
+   <h2>Action buttons</h2>
+   <p>
+      <input type="submit" value="<input type=submit>">
+      <input type="button" value="<input type=button>">
+      <input type="reset" value="<input type=reset>">
+      <input type="submit" value="<input disabled>" disabled>
+   </p>
+   <p>
+      <button type="submit">&lt;button type=submit&gt;</button>
+      <button type="button">&lt;button type=button&gt;</button>
+      <button type="reset">&lt;button type=reset&gt;</button>
+      <button type="button" disabled>&lt;button disabled&gt;</button>
+   </p>
+</article>
+    `,
+    form: `
+<h2>Newsletter Form Example</h2>
+<form>
+  <fieldset>
+    <legend>Newsletter</legend>
+    <h4>🚀 Level up your tech skills! 💻</h4>
+    <div style="padding-bottom: 1em;">
+      <input type="email" id="email" name="email" placeholder="Email" required />
+      <button type="submit">Subscribe</button>
+    </div>
+  </fieldset>
+</form>
+<hr />
+<h2>Sign Up Form Example</h2>
+<form action="#" method="POST">
+  <div>
+    <label for="username">Username:</label><br />
+    <input type="text" id="username" name="username" required />
+  </div>
+  <div>
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required />
+  </div>
+  <div>
+    <label for="password">Password:</label><br />
+    <input type="password" id="password" name="password" required />
+  </div>
+  <fieldset>
+    <legend>Role</legend>
+    <div>
+      <input type="radio" name="role" />
+      <label>Admin</label>
+    </div>
+    <div>
+      <input type="radio" name="role" />
+      <label>Moderator</label>
+    </div>
+    <div>
+      <input type="radio" name="role" />
+      <label>User</label>
+    </div>
+  </fieldset>
+  <div>
+    <button type="submit" class="submit-btn">Sign Up</button>
+    <p>Already have an account? <a href="#">Sign in</a></p>
+  </div>
+</form>
+    `,
+    post: `
+ <main>
+    <img src="https://cdn.leonardo.ai/users/b023ed56-e866-4238-980f-af56a8b7ea42/generations/01d0116c-c48c-40c7-8997-892c8242df47/Leonardo_Anime_XL_A_resilient_postapocalyptic_waifu_survivor_h_1.jpg" />
+    <blockquote>
+        Post generated with DeepSeek & Image with Leonardo AI
+    </blockquote>
+    <h1>Why Every JavaScript Framework Sucks (The solution is an Atomic Bomb!)</h1>
+    <p>
+        Let’s face it: every JavaScript framework has its flaws. React? Too much boilerplate. Angular? Overly complex. Vue? Great, but not perfect. Svelte? Close, but still not <em>the one</em>. The truth is, no framework can solve
+        <em>everything</em> without introducing new problems.
+    </p>
+    <p>
+        The real issue? We keep building on top of bloated foundations. The solution? An <strong>Atomic Bomb</strong>—blow it all up and start fresh. Simplify. Strip it down to the essentials. No more endless configs, no more dependency
+        hell. Just pure, clean, efficient code.
+    </p>
+    <p>Maybe the next big thing isn’t another framework—it’s a revolution. 💥</p>
+    <h2>The solution: AtomicJS</h2>
+    <p>The framework that does absolutely nothing—because sometimes, less is more.</p>
+    <p>With AtomicJS, you don’t need to worry about state management, virtual DOMs, or reactive data binding. Instead, you get two functions: addHTML and renderHTML. That’s it. No fluff, no nonsense. Just pure, unadulterated simplicity.</p>
+    <pre>
+<code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> htmlStorage</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> addHTML</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">key</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">html</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">typeof</span><span style="color:#E1E4E8"> key </span><span style="color:#F97583">!==</span><span style="color:#9ECBFF"> 'string'</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        console.</span><span style="color:#B392F0">error</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'Key must be a string'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">typeof</span><span style="color:#E1E4E8"> html </span><span style="color:#F97583">!==</span><span style="color:#9ECBFF"> 'string'</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        console.</span><span style="color:#B392F0">error</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'HTML must be a string'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">    htmlStorage[key] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> html;</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">\`HTML added with key: ${`</span><span style="color:#E1E4E8">key</span><span style="color:#9ECBFF">`}\`</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> renderHTML</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">key</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">!</span><span style="color:#E1E4E8">htmlStorage[key]) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        console.</span><span style="color:#B392F0">error</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">\`No HTML found for key: ${`</span><span style="color:#E1E4E8">key</span><span style="color:#9ECBFF">`}\`</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">    document.body.innerHTML </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> htmlStorage[key];</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">\`HTML rendered for key: ${`</span><span style="color:#E1E4E8">key</span><span style="color:#9ECBFF">`}\`</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+    <p><b>Here’s how it works:</b></p>
+    <ol>
+        <li>Store your HTML in a global object.</li>
+        <li>Render it when you feel like it.</li>
+        <li>That’s it. You’re done.</li>
+    </ol>
+    <p>No more overthinking. No more decision fatigue. Just HTML and a dream.</p>
+
+    <p>#JavaScript #WebDev #FrameworkWars #AtomicBomb</p>
+</main>
+    `
+  }
+  root.innerHTML=pages.html
+  </script>
 </html>

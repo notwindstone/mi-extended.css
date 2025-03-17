@@ -31,6 +31,7 @@ dt,
 pre,
 form,
 table,
+fieldset,
 blockquote {
   margin: 1em 0;
 }
@@ -104,7 +105,7 @@ fieldset,
 textarea {
   border: 1px solid #212121;
   outline: none;
-  padding: 3px 8px;
+  padding: 3px 7px;
   background: none;
   border-radius: 3px;
 }
