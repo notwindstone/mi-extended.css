@@ -1,100 +1,174 @@
+/*
+ * You should minify this file
+ *
+ * mi.css original website: https://html-preview.github.io/?url=https://github.com/FelipeIzolan/mi.css/blob/main/index.html
+ * mi.css source code:      https://github.com/FelipeIzolan/mi.css
+ * mi.css reddit post:      https://www.reddit.com/r/webdev/comments/1jc2qlx/minimal_css_1kb_for_contentdriven_websites/
+ */
+
+
+:root {
+    --primary-color: #f6f6f6;
+    --background-color: #101010;
+    --accent-color: #ebbcba;
+}
+
+[data-theme="light"] {
+    --primary-color: #212121;
+    --background-color: #f6f6f6;
+    --accent-color: #d7827e;
+}
+
+/* 'You can remove these without thinking' section START */
+/* Don't show an underline for heading anchor tags */
+h1 a {
+    text-decoration: none;
+}
+
+/* Use accent-color for heading 3 */
+h3 {
+    color: #212121; /* fallback color */
+    color: var(--accent-color);
+}
+/* 'You can remove these without thinking' section END */
+
 html,
 body {
-  color: #212121;
-  font-size: 16px;
-  background: #f6f6f6;
-  line-height: 1.4;
-  font-family: monospace;
+    /*
+     *  accent color doesn't need a fallback color
+     *  because it's newer than css variables
+     */
+    accent-color: var(--accent-color);
+    background: #f6f6f6; /* fallback color (this is basically support for old browsers) */
+    background: var(--background-color);
+    color: #212121; /* fallback color */
+    color: var(--primary-color);
+    scroll-behavior: smooth;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: monospace;
 }
 
 body {
-  margin: auto;
-  padding: 1em;
-  max-width: 720px;
+    margin: auto;
+    padding: 1em;
+    max-width: 720px;
 }
 
-/*/
+/*
  *  depending on the project, add or remove:
-/*/ 
+ */
 nav,
 main,
 header,
 footer,
 section,
 article {
-  margin: 1em 0;
+    margin: 1em 0;
 }
-/*/
+/*
  * -------------------------------------------------- *
-/*/
+ */
 dt,
 pre,
 form,
 table,
 fieldset,
 blockquote {
-  margin: 1em 0;
+    margin: 1em 0;
 }
-/*/
+/*
  * -------------------------------------------------- *
-/*/
+*/
+
+html,
+body,
+p,
+a,
+div,
+span,
+h3 {
+    transition: background-color 200ms ease, color 200ms ease;
+}
 
 a {
-  color: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #d7827e; /* fallback color */
+    color: var(--accent-color);
 }
 
 pre {
-  padding: 1em;
-  border-radius: 3px;
+    padding: 1em;
+}
+
+pre,
+img,
+input,
+textarea,
+select,
+legend,
+fieldset,
+button {
+    border-radius: 4px;
 }
 
 img {
-  height: auto;
-  max-width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 input {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 blockquote {
-  border-left: 4px solid #212121;
-  padding-left: 1em;
+    border-left: 4px solid #d7827e; /* fallback color */
+    border-color: var(--accent-color);
+    padding-left: 1em;
 }
 
 article h1 { /*override :-webkit-any*/
-  font-size: 2em;
+    font-size: 2em;
 }
 
 ul,
 ol {
-  padding: 0;
-  list-style-position: inside;
+    padding: 0;
+    list-style-position: inside;
 }
 
 li > ul,
 li > ol {
-  padding: 0 1em;
+    padding: 0 1em;
+}
+
+li {
+    padding: 2px 0;
 }
 
 pre,
 code {
-  color: white;
-  overflow: auto;
-  background: #212121;
+    color: white;
+    overflow: auto;
+    background: #212121;
 }
 
 input:disabled,
 button:disabled {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 td,
 th,
 table {
-  border: 1px solid #212121;
-  padding: 8px;
-  border-collapse: collapse;
+    border: 1px solid #212121; /* fallback color */
+    border-color: var(--primary-color);
+    padding: 8px;
+    border-collapse: collapse;
 }
 
 input,
@@ -103,11 +177,17 @@ select,
 legend,
 fieldset,
 textarea {
-  border: 1px solid #212121;
-  outline: none;
-  padding: 3px 7px;
-  background: none;
-  border-radius: 3px;
+    color: #212121; /* fallback color */
+    color: var(--primary-color);
+    border: 1px solid #212121; /* fallback color */
+    border-color: var(--primary-color);
+    outline: none;
+    padding: 3px 7px;
+    background: none;
+}
+
+fieldset {
+    padding-bottom: 8px;
 }
 
 button,
@@ -115,6 +195,8 @@ legend,
 input[type="reset"],
 input[type="button"],
 input[type="submit"] {
-  color: #f6f6f6;
-  background: #212121;
+    color: #f6f6f6; /* fallback color */
+    color: var(--background-color);
+    background: #212121; /* fallback color */
+    background: var(--primary-color);
 }
