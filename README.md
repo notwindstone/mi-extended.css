@@ -12,6 +12,11 @@ Minimal website cascading style sheets (CSS) (~2kb) based on mi.css with various
 > [!WARNING]
 > You should always minify or bundle your css files.
 
+
+## ✨ Examples
+
+- [my portfolio website](https://notwindstone.github.io/) - a SPA website written in pure html, css, js and minified to just ~10kb of code
+
 ## 📜 License
 
 - [mi.css](https://github.com/FelipeIzolan/mi.css) - The unlicense
