@@ -1,11 +1,11 @@
 /*
  * You should minify this file
+ * You can remove fallback colors if you don't plan supporting ancient browsers like Internet Explorer 7
  *
  * mi.css original website: https://html-preview.github.io/?url=https://github.com/FelipeIzolan/mi.css/blob/main/index.html
  * mi.css source code:      https://github.com/FelipeIzolan/mi.css
  * mi.css reddit post:      https://www.reddit.com/r/webdev/comments/1jc2qlx/minimal_css_1kb_for_contentdriven_websites/
  */
-
 
 :root {
     --primary-color: #f6f6f6;
@@ -19,7 +19,7 @@
     --accent-color: #d7827e;
 }
 
-/* 'You can remove these without thinking' section START */
+/* "You can remove these without thinking" section START */
 /* Don't show an underline for heading anchor tags */
 h1 a {
     text-decoration: none;
@@ -30,7 +30,7 @@ h3 {
     color: #212121; /* fallback color */
     color: var(--accent-color);
 }
-/* 'You can remove these without thinking' section END */
+/* "You can remove these without thinking" section END */
 
 html,
 body {
