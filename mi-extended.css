@@ -92,7 +92,7 @@ h3 {
 }
 
 a {
-    color: #212121;
+    color: #212121; /* fallback color */
     color: var(--primary-color);
     cursor: pointer;
 }
