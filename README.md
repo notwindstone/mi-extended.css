@@ -1,15 +1,16 @@
-# ʕ•ᴥ•ʔ mi.css
+# ʕ•ᴥ•ʔ mi-extended.css
 
-minimal website cascading style sheets (CSS) (~1kb)
+Minimal website cascading style sheets (CSS) (~2kb) based on mi.css with various improvements, dark & light theme support
 
 ## 🚀 Getting Started
 
-- Download or copy mi.css.
-- Edit mi.css. (read the comments!)
-- link or import mi.css.
+- Download or copy `mi-extended.css`.
+- Edit `mi-extended.css`. (read the comments!)
+- Minify `mi-extended.css`.
+- Link or import the minified file.
 
 > [!WARNING]
-> You must minify or bundle mi.css.
+> You should always minify or bundle your css files.
 
 ## 📜 License
 
