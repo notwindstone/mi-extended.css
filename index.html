@@ -3,22 +3,51 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Minimal website cascading style sheets (~2kb) based on mi.css with various improvements, dark &amp; light theme support">
+      
       <link rel="stylesheet" href="./mi-extended.css">
-      <title>mi.css</title>
+      <title>mi-extended.css</title>
+
+      <meta property="og:url" content="https://notwindstone.github.io/mi-extended.css/">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="mi-extended.css">
+      <meta property="og:description" content="Minimal website cascading style sheets (~2kb) based on mi.css with various improvements, dark &amp; light theme support">
+      
+      <meta name="twitter:card" content="summary_large_image">
+      <meta property="twitter:domain" content="notwindstone.github.io">
+      <meta property="twitter:url" content="https://notwindstone.github.io/mi-extended.css/">
+      <meta name="twitter:title" content="mi-extended.css">
+      <meta name="twitter:description" content="Minimal website cascading style sheets (~2kb) based on mi.css with various improvements, dark &amp; light theme support">
+
+      <!-- Meta Tags Generated via https://www.opengraph.xyz -->
    </head>
    <body>
       <header style="margin:0">
-        <h1 style="margin:0">ʕ•ᴥ•ʔ mi.css</h1>
-        <div style="display:flex;gap:2px;font-size:0.8em"> 
-          <a style="text-decoration:underline" onclick="root.innerHTML=pages.html">All HTML</a> |
-          <a style="text-decoration:underline" onclick="root.innerHTML=pages.post">Post Example</a> |
-          <a style="text-decoration:underline" onclick="root.innerHTML=pages.form">Form Example</a>
-        </div>
+        <h1 style="margin:0">
+           <a href="#">ʕ•ᴥ•ʔ mi.css</a>
+        </h1>
+        <nav style="display:flex;gap:8px;font-size:0.8em;user-select:none">
+           <a style="text-decoration:underline;" href="#" onclick="root.innerHTML=pages.html">All HTML</a> -
+           <a style="text-decoration:underline;" href="#" onclick="root.innerHTML=pages.post">Post Example</a> -
+           <a style="text-decoration:underline;" href="#" onclick="root.innerHTML=pages.form">Form Example</a> -
+           <a style="text-decoration:underline" href="#" onclick="changeTheme()">✨ Change Theme</a>
+        </nav>
       </header>
       <div id='root'>
       </div>
   </body>
-  <script>  
+  <script>
+  function changeTheme() {
+      // dark theme is default
+      var currentTheme = document.documentElement.getAttribute('data-theme') || "dark"
+      var replacements = {
+          dark: "light",
+          light: "dark"
+      }
+
+      document.documentElement.setAttribute('data-theme', replacements[currentTheme])
+  }
+     
   var root = document.getElementById('root');
   var pages = {
     html: `
